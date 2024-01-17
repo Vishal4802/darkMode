@@ -1,0 +1,101 @@
+body{
+    transition-duration: .2s;
+    background-color: #f2f2f2;
+    color: rgb(255, 102, 0);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+body.dark {
+    background-color: #222;
+    color: #f2f2f2;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    transition-duration: .2s;
+    position: relative;
+    font-family: cursive;
+    font-size: 2vmax;
+}
+
+button {
+    background-color: rgb(255, 102, 0);
+    color: #f2f2f2;
+    border: none;
+    outline: none;
+    border-radius: 5%;
+    transition-duration: .2s;
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    transition-duration: .2s;
+}
+
+.sun > img,
+.moon > img {
+    width: 50px;
+    height: 50px;
+}
+
+button > img.dark {
+    transform: rotate(180deg);
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.1);
+}
+
+button.dark {
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+.sun-moon {
+    position: absolute;
+    top: 0;
+    height: 200vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: .2s;
+    padding: 5%;
+}
+
+.sun-moon.dark {
+    transform: rotate(180deg);
+}
+
+.moon {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.sun.dark {
+    opacity: 0;
+}
+
+.moon.dark {
+    opacity: 100%;
+}
